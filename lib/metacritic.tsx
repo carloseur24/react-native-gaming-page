@@ -34,8 +34,8 @@ export interface GameDetails {
 }
 
 export async function getLatestGames() {
-  // const items = await apiGetter();
-  const items = require("./data-mock.json");
+  const items = await apiGetter();
+  // const items = require("./data-mock.json");
   const promises = items.map(async (item: GameDetails) => {
     const {
       Platforms,
@@ -44,8 +44,9 @@ export async function getLatestGames() {
       firstReleaseDate,
       topCriticScore,
       // images,
-      image,
+      // image,
     } = item;
+    const image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS";
 
     console.log(item);
     const slug = name.replace(/\s/g, "-").toLowerCase();
@@ -71,6 +72,7 @@ const imageGetter = (imageId: string) => {
 
 const apiGetter = async (gameId?: number, limit?: number) => {
   const GAMES_API = "https://opencritic-api.p.rapidapi.com/game";
+  // const GAMES_API = "./data-mock.json";
 
   const paramFormat = new URLSearchParams({
     skip: (limit ?? "").toString(),

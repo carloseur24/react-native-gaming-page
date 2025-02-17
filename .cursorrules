@@ -1,0 +1,188 @@
+You are an expert in TypeScript, React Native, Expo, and Mobile App Development.
+
+Code Style and Structure:
+- Write concise, type-safe TypeScript code.
+- Use functional components and hooks over class components.
+- Ensure components are modular, reusable, and maintainable.
+- Organize files by feature, grouping related components, hooks, and styles.
+
+Naming Conventions:
+- Use camelCase for variable and function names (e.g., `isFetchingData`, `handleUserInput`).
+- Use PascalCase for component names (e.g., `UserProfile`, `ChatScreen`).
+- Directory names should be lowercase and hyphenated (e.g., `user-profile`, `chat-screen`).
+
+TypeScript Usage:
+- Use TypeScript for all components, favoring interfaces for props and state.
+- Enable strict typing in `tsconfig.json`.
+- Avoid using `any`; strive for precise types.
+- Utilize `React.FC` for defining functional components with props.
+
+Performance Optimization:
+- Minimize `useEffect`, `useState`, and heavy computations inside render methods.
+- Use `React.memo()` for components with static props to prevent unnecessary re-renders.
+- Optimize FlatLists with props like `removeClippedSubviews`, `maxToRenderPerBatch`, and `windowSize`.
+- Use `getItemLayout` for FlatLists when items have a consistent size to improve performance.
+- Avoid anonymous functions in `renderItem` or event handlers to prevent re-renders.
+
+UI and Styling:
+- Use consistent styling, either through `StyleSheet.create()` or Styled Components.
+- Ensure responsive design by considering different screen sizes and orientations.
+- Optimize image handling using libraries designed for React Native, like `react-native-fast-image`.
+
+Best Practices:
+- Follow React Native's threading model to ensure smooth UI performance.
+- Utilize Expo's EAS Build and Updates for continuous deployment and Over-The-Air (OTA) updates.
+- Use React Navigation for handling navigation and deep linking with best practices.
+
+
+Cursor Rules para Crear un Proyecto de React Native con Expo
+1. Inicialización del Proyecto
+Regla 1: Utiliza npx create-expo-app para crear un proyecto nuevo.
+
+Comando: npx create-expo-app <nombre-del-proyecto> --template blank
+Justificación: Inicializa un proyecto con una plantilla vacía para evitar sobrecarga de dependencias innecesarias.
+Regla 2: Verifica la instalación de dependencias.
+
+Acción: Ejecuta npm install o yarn install para asegurar que todas las dependencias se instalen correctamente.
+Justificación: Evita problemas de rendimiento y errores en la compilación.
+2. Estructura del Proyecto
+Regla 3: Organiza tu proyecto en carpetas lógicas.
+
+Ejemplo:
+```text
+/src
+  /components
+  /screens
+  /assets
+  /hooks
+  /utils
+  App.js
+```
+
+Justificación: Mejora la legibilidad y facilita la colaboración en equipos.
+Regla 4: Utiliza TypeScript (opcional).
+
+Acción: Si decides usar TypeScript, asegúrate de configurar tsconfig.json correctamente.
+Justificación: Mejora la seguridad del código y facilita la refactorización.
+3. Desarrollo Rápido y Eficiente
+Regla 5: Utiliza Expo para pruebas rápidas.
+
+Acción: Ejecuta npm start o expo start para abrir el menú de desarrollo.
+Justificación: Permite probar cambios en tiempo real en web, iOS y Android.
+Regla 6: Aprovecha el Fast Refresh de Expo.
+
+Acción: Guarda cambios en el código y observa cómo se actualizan automáticamente en el simulador.
+Justificación: Reduce el tiempo de desarrollo al evitar recompilaciones completas.
+
+4. Componentes y Estilos
+Regla 7: Utiliza componentes reutilizables.
+
+Ejemplo: Crea un componente GameCard.js para mostrar juegos en una lista.
+
+Justificación: Mejora la reutilización del código y facilita las actualizaciones.
+Regla 8: Aplica estilos con StyleSheet.
+
+Ejemplo:
+```javascript
+import { StyleSheet } from 'react-native';
+const styles = StyleSheet.create({
+  container: { padding: 20 },
+  title: { fontSize: 18, fontWeight: 'bold' }
+});
+```
+
+Justificación: Centraliza la gestión de estilos y mejora la legibilidad.
+
+5. Gestión de Datos
+Regla 9: Utiliza useState y useEffect para manejar estado y efectos secundarios.
+
+Ejemplo:
+```javascript
+import { useState, useEffect } from 'react';
+const [data, setData] = useState([]);
+useEffect(() => {
+  fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => setData(data));
+}, []);
+```
+
+Justificación: Permite la integración de datos externos de manera eficiente.
+Regla 10: Utiliza FlatList para renderizar listas grandes.
+
+Ejemplo:
+
+```javascript
+<FlatList
+  data={data}
+  keyExtractor={(item) => item.id}
+  renderItem={({ item }) => <GameCard game={item} />}
+/>
+```
+
+Justificación: Mejora el rendimiento al renderizar solo los elementos visibles.
+6. Navegación y Enrutado
+Regla 11: Utiliza Expo Router para la navegación.
+
+Acción: Instala expo-router y configura las rutas en el proyecto.
+Justificación: Simplifica la navegación entre pantallas y mejora la experiencia del usuario.
+Regla 12: Crea pantallas reutilizables.
+
+Ejemplo: Crea archivos como HomeScreen.js, DetailScreen.js y configura las rutas en app.json.
+Justificación: Facilita la gestión de la navegación y la reutilización de componentes.
+7. Optimización y Mejores Prácticas
+Regla 13: Utiliza SafeAreaView para evitar desbordamientos en iOS.
+
+Ejemplo:
+
+```javascript
+import { SafeAreaView } from 'react-native-safe-area-context';
+<SafeAreaView style={styles.container}>
+  {/* Contenido */}
+</SafeAreaView>
+```
+
+Justificación: Asegura que el contenido se muestre correctamente en dispositivos con notches o biseles.
+Regla 14: Añade indicadores de carga para mejorar la UX.
+
+Ejemplo:
+
+```javascript
+import { ActivityIndicator } from 'react-native';
+{data.length === 0 && <ActivityIndicator size="large" color="#0000ff" />}
+```
+
+Justificación: Mejora la experiencia del usuario al mostrar un indicador mientras se cargan los datos.
+
+Regla 15: Utiliza animaciones para mejorar la interacción.
+
+Ejemplo:
+
+```javascript
+import { Animated } from 'react-native';
+const opacity = new Animated.Value(0);
+Animated.timing(opacity, { toValue: 1, duration: 500 }).start();
+<Animated.View style={{ opacity }}>
+  {/* Contenido */}
+</Animated.View>
+```
+
+Justificación: Añade interacciones visuales que mejoran la experiencia del usuario.
+
+8. Pruebas y Despliegue
+Regla 16: Prueba en múltiples dispositivos y plataformas.
+
+Acción: Utiliza simuladores de iOS y Android, además de la versión web.
+
+Justificación: Asegura que la aplicación funcione correctamente en diferentes entornos.
+
+Regla 17: Utiliza Expo Go para pruebas en dispositivos físicos.
+
+Acción: Instala la aplicación Expo Go en tu dispositivo y escanea el QR generado por Expo.
+Justificación: Permite probar la aplicación en tiempo real en dispositivos físicos sin necesidad de compilar.
+
+Regla 18: Prepara el proyecto para el despliegue.
+
+Acción: Utiliza expo build para crear builds para iOS y Android.
+
+Justificación: Simplifica el proceso de despliegue y asegura que la aplicación esté lista para producción.

@@ -1,4 +1,5 @@
 const credentials = require("./api-credentials.json");
+const localGameListMock = require("./data-mock.json");
 
 interface Platform {
   id: number;
@@ -23,6 +24,7 @@ interface Images {
 export interface GameDetails {
   images: Images;
   image: string;
+  description: string;
   tags?: any[];
   topCriticScore?: number;
   tier: string;
@@ -46,6 +48,7 @@ export async function getLatestGames() {
       // images,
       // image,
     } = item;
+    const description= `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio vitae repellat suscipit a, cupiditate laboriosam totam unde, eligendi ex natus sequi officiis distinctio ad, fuga pariatur fugit aliquam voluptatum dolore.`
     const image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS";
 
     console.log(item);
@@ -61,6 +64,7 @@ export async function getLatestGames() {
       topCriticScore,
       image,
       slug,
+      description,
     };
   });
   return Promise.all(promises);
@@ -72,7 +76,6 @@ const imageGetter = (imageId: string) => {
 
 const apiGetter = async (gameId?: number, limit?: number) => {
   const GAMES_API = "https://opencritic-api.p.rapidapi.com/game";
-  // const GAMES_API = "./data-mock.json";
 
   const paramFormat = new URLSearchParams({
     skip: (limit ?? "").toString(),
@@ -91,6 +94,8 @@ const apiGetter = async (gameId?: number, limit?: number) => {
       },
     });
     const items = await rawData.json();
+
+    // const items = localGameListMock;
     return items;
   } catch (error) {
     console.log(error);

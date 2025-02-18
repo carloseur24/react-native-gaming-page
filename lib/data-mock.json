@@ -1,397 +1,398 @@
 [
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-1.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game1-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game1-screenshot2.png"
-          }
-        ]
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-1.png",
+        "width": "1920px",
+        "height": "1080px"
       },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
+      "screenshots": [
         {
-          "name": "Jogo Online"
+          "url": "/games/screenshots/game1-screenshot1.png"
         },
         {
-          "name": "Multiplayer"
+          "url": "/games/screenshots/game1-screenshot2.png"
         }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-1",
-      "name": "Exemplo Jogo 1",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-01-01T00:00:00.000Z"
+      ]
     },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-2.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game2-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game2-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "Jogo Online"
-        },
-        {
-          "name": "Cooperativo"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-2",
-      "name": "Exemplo Jogo 2",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-02-01T00:00:00.000Z"
-    },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-3.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game3-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game3-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "Ação"
-        },
-        {
-          "name": "Singleplayer"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-3",
-      "name": "Exemplo Jogo 3",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-03-01T00:00:00.000Z"
-    },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-4.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game4-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game4-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "RPG"
-        },
-        {
-          "name": "Multiplayer"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-4",
-      "name": "Exemplo Jogo 4",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-04-01T00:00:00.000Z"
-    },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-5.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game5-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game5-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "Aventura"
-        },
-        {
-          "name": "Cooperativo"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-5",
-      "name": "Exemplo Jogo 5",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-05-01T00:00:00.000Z"
-    },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-6.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game6-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game6-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "Estratégia"
-        },
-        {
-          "name": "Simulação"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-6",
-      "name": "Exemplo Jogo 6",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-06-01T00:00:00.000Z"
-    },
-    {
-      "images": {
-        "cover": {
-          "url": "/games/covers/game-cover-7.png",
-          "width": "1920px",
-          "height": "1080px"
-        },
-        "screenshots": [
-          {
-            "url": "/games/screenshots/game7-screenshot1.png"
-          },
-          {
-            "url": "/games/screenshots/game7-screenshot2.png"
-          }
-        ]
-      },
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-      "tags": [
-        {
-          "name": "Corrida"
-        },
-        {
-          "name": "Online"
-        }
-      ],
-      "topCriticScore": 5.6,
-      "tier": "",
-      "slug": "exemplo-jogo-7",
-      "name": "Exemplo Jogo 7",
-      "Platforms": [],
-      "id": "",
-      "firstReleaseDate": "2023-07-01T00:00:00.000Z"
-    },{
-        "images": {
-          "cover": {
-            "url": "/games/covers/game-cover-8.png",
-            "width": "1920px",
-            "height": "1080px"
-          },
-          "screenshots": [
-            {
-              "url": "/games/screenshots/game8-screenshot1.png"
-            },
-            {
-              "url": "/games/screenshots/game8-screenshot2.png"
-            }
-          ]
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-        "tags": [
-          {
-            "name": "Esporte"
-          },
-          {
-            "name": "Competição"
-          }
-        ],
-        "topCriticScore": 5.6,
-        "tier": "",
-        "slug": "exemplo-jogo-8",
-        "name": "Exemplo Jogo 8",
-        "Platforms": [],
-        "id": "",
-        "firstReleaseDate": "2023-08-01T00:00:00.000Z"
+    "image": "./assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Jogo Online"
       },
       {
-        "images": {
-          "cover": {
-            "url": "/games/covers/game-cover-9.png",
-            "width": "1920px",
-            "height": "1080px"
-          },
-          "screenshots": [
-            {
-              "url": "/games/screenshots/game9-screenshot1.png"
-            },
-            {
-              "url": "/games/screenshots/game9-screenshot2.png"
-            }
-          ]
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-        "tags": [
-          {
-            "name": "Quebra-cabeça"
-          },
-          {
-            "name": "Casual"
-          }
-        ],
-        "topCriticScore": 5.6,
-        "tier": "",
-        "slug": "exemplo-jogo-9",
-        "name": "Exemplo Jogo 9",
-        "Platforms": [],
-        "id": "",
-        "firstReleaseDate": "2023-09-01T00:00:00.000Z"
-      },
-      {
-        "images": {
-          "cover": {
-            "url": "/games/covers/game-cover-10.png",
-            "width": "1920px",
-            "height": "1080px"
-          },
-          "screenshots": [
-            {
-              "url": "/games/screenshots/game10-screenshot1.png"
-            },
-            {
-              "url": "/games/screenshots/game10-screenshot2.png"
-            }
-          ]
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-        "tags": [
-          {
-            "name": "Horror"
-          },
-          {
-            "name": "Survival"
-          }
-        ],
-        "topCriticScore": 5.6,
-        "tier": "",
-        "slug": "exemplo-jogo-10",
-        "name": "Exemplo Jogo 10",
-        "Platforms": [],
-        "id": "",
-        "firstReleaseDate": "2023-10-01T00:00:00.000Z"
-      },
-      {
-        "images": {
-          "cover": {
-            "url": "/games/covers/game-cover-9.png",
-            "width": "1920px",
-            "height": "1080px"
-          },
-          "screenshots": [
-            {
-              "url": "/games/screenshots/game9-screenshot1.png"
-            },
-            {
-              "url": "/games/screenshots/game9-screenshot2.png"
-            }
-          ]
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-        "tags": [
-          {
-            "name": "Quebra-cabeça"
-          },
-          {
-            "name": "Casual"
-          }
-        ],
-        "topCriticScore": 5.6,
-        "tier": "",
-        "slug": "exemplo-jogo-9",
-        "name": "Exemplo Jogo 9",
-        "Platforms": [],
-        "id": "",
-        "firstReleaseDate": "2023-09-01T00:00:00.000Z"
-      },
-      {
-        "images": {
-          "cover": {
-            "url": "/games/covers/game-cover-10.png",
-            "width": "1920px",
-            "height": "1080px"
-          },
-          "screenshots": [
-            {
-              "url": "/games/screenshots/game10-screenshot1.png"
-            },
-            {
-              "url": "/games/screenshots/game10-screenshot2.png"
-            }
-          ]
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS",
-        "tags": [
-          {
-            "name": "Horror"
-          },
-          {
-            "name": "Survival"
-          }
-        ],
-        "topCriticScore": 5.6,
-        "tier": "",
-        "slug": "exemplo-jogo-10",
-        "name": "Exemplo Jogo 10",
-        "Platforms": [],
-        "id": "",
-        "firstReleaseDate": "2023-10-01T00:00:00.000Z"
+        "name": "Multiplayer"
       }
-    ]
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-1",
+    "name": "Exemplo Jogo 1",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-01-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-2.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game2-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game2-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Jogo Online"
+      },
+      {
+        "name": "Cooperativo"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-2",
+    "name": "Exemplo Jogo 2",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-02-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-3.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game3-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game3-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Ação"
+      },
+      {
+        "name": "Singleplayer"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-3",
+    "name": "Exemplo Jogo 3",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-03-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-4.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game4-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game4-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "RPG"
+      },
+      {
+        "name": "Multiplayer"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-4",
+    "name": "Exemplo Jogo 4",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-04-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-5.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game5-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game5-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Aventura"
+      },
+      {
+        "name": "Cooperativo"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-5",
+    "name": "Exemplo Jogo 5",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-05-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-6.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game6-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game6-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Estratégia"
+      },
+      {
+        "name": "Simulação"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-6",
+    "name": "Exemplo Jogo 6",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-06-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-7.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game7-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game7-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Corrida"
+      },
+      {
+        "name": "Online"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-7",
+    "name": "Exemplo Jogo 7",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-07-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-8.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game8-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game8-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Esporte"
+      },
+      {
+        "name": "Competição"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-8",
+    "name": "Exemplo Jogo 8",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-08-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-9.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game9-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game9-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Quebra-cabeça"
+      },
+      {
+        "name": "Casual"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-9",
+    "name": "Exemplo Jogo 9",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-09-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-10.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game10-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game10-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Horror"
+      },
+      {
+        "name": "Survival"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-10",
+    "name": "Exemplo Jogo 10",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-9.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game9-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game9-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Quebra-cabeça"
+      },
+      {
+        "name": "Casual"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-9",
+    "name": "Exemplo Jogo 9",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-09-01T00:00:00.000Z"
+  },
+  {
+    "images": {
+      "cover": {
+        "url": "/games/covers/game-cover-10.png",
+        "width": "1920px",
+        "height": "1080px"
+      },
+      "screenshots": [
+        {
+          "url": "/games/screenshots/game10-screenshot1.png"
+        },
+        {
+          "url": "/games/screenshots/game10-screenshot2.png"
+        }
+      ]
+    },
+    "image": "./../assets/images/example_craiyon.png",
+    "tags": [
+      {
+        "name": "Horror"
+      },
+      {
+        "name": "Survival"
+      }
+    ],
+    "topCriticScore": 5.6,
+    "tier": "",
+    "slug": "exemplo-jogo-10",
+    "name": "Exemplo Jogo 10",
+    "Platforms": [],
+    "id": "",
+    "firstReleaseDate": "2023-10-01T00:00:00.000Z"
+  }
+]

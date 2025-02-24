@@ -4,6 +4,7 @@ import {
 } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Main from "./Main";
+import * as Constants from 'expo-constants';
 
 export default function App() {
   return (
@@ -19,6 +20,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
-    padding: 12
+    padding: Constants.default.statusBarHeight,
   },
 });

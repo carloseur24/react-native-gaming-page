@@ -1,8 +1,9 @@
+import { GameType } from "@/lib/metacritic";
 import { View, Text, Image, StyleSheet } from "react-native";
 
 function GameCard({ game }: { game: GameType }) {
   return (
-    <View key={game.id || index} style={styles.card}>
+    <View key={game.id} style={styles.card}>
             <Image source={{ uri: game.image }} style={styles.image} />
             <Text style={styles.title}>{game.name}</Text>
             <Text style={styles.score}>{game.topCriticScore?.toFixed(2)}</Text>

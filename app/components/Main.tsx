@@ -3,7 +3,7 @@ import { View, ActivityIndicator, FlatList } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getLatestGames, GameType } from "../../lib/metacritic";
 import GameCard from "./GameCard";
-import { Logo } from "./Logo";
+// import Logo from "./Logo";
 
 export default function Main() {
   const [games, setGames] = useState<GameType[]>([]);
@@ -13,9 +13,9 @@ export default function Main() {
     getLatestGames().then((games: GameType[]) => setGames(games));
   }, []);
 
-  return (
+  return (e
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom, paddingHorizontal: 12 }}>
-      <Logo />
+      {/* <Logo /> */}
       {games.length === 0 ? (
         <View style={{ display: "flex", width: "100%", height: "100%", justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator color="#fff" size="large" />

@@ -8,7 +8,7 @@
       ]
     },
     "jsx": "react-native",
-    "jsxImportSource": "@react-native/types",
+    "jsxImportSource": "react",
     "lib": ["dom", "esnext"],
     "module": "esnext",
     "target": "esnext",

@@ -1,17 +1,15 @@
-import { useEffect, useState } from "react";
-import { StyleSheet, View, Image, Text, ScrollView } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { getLatestGames, GameType } from "../lib/metacritic";
+import { useEffect, useState } from 'react';
+import { StyleSheet, View, Image, Text, ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { getLatestGames, GameType } from '../lib/metacritic';
 
 export default function Main() {
   const [games, setGames] = useState<GameType[]>([]);
   const insets = useSafeAreaInsets();
 
-  
   useEffect(() => {
     getLatestGames().then((games: GameType[]) => setGames(games));
   }, []);
-
 
   return (
     <>
@@ -31,34 +29,34 @@ export default function Main() {
 
 const styles = StyleSheet.create({
   card: {
-    alignItems: "baseline",
-    justifyContent: "center",
-    backgroundColor: "#000",
+    alignItems: 'baseline',
+    justifyContent: 'center',
+    backgroundColor: '#000',
     marginBottom: 20, // Add some spacing between cards
   },
   image: {
     width: 200,
     height: 300,
-    resizeMode: "cover", // Use resizeMode instead
+    resizeMode: 'cover', // Use resizeMode instead
     borderRadius: 10,
     marginBottom: 15,
   },
   title: {
-    fontWeight: "bold",
-    color: "#eee",
+    fontWeight: 'bold',
+    color: '#eee',
     fontSize: 20,
   },
   description: {
     marginTop: 10,
-    fontWeight: "500",
-    color: "#eee",
+    fontWeight: '500',
+    color: '#eee',
     fontSize: 18,
   },
   score: {
     marginTop: 10,
-    backgroundColor: "#0e06",
-    fontWeight: "bold",
-    color: "#eee",
+    backgroundColor: '#0e06',
+    fontWeight: 'bold',
+    color: '#eee',
     fontSize: 18,
     paddingVertical: 5, // Use paddingVertical and paddingHorizontal
     paddingHorizontal: 8,

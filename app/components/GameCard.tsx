@@ -1,5 +1,6 @@
 import { GameType } from "@/lib/metacritic";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { useEffect, useRef } from "react";
+import { View, Text, Image, StyleSheet, Animated } from "react-native";
 
 function GameCard({ game }: { game: GameType }) {
   return (
@@ -12,6 +13,25 @@ function GameCard({ game }: { game: GameType }) {
   )
 }
 
+function AnimatedGameCard({game,index}){
+
+  const opacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(()=>{
+  Animated.timing(opacity,{
+    toValue: 1,
+    duration: 500,
+    delay: index * 100,
+    useNativeDriver: true,
+  }).start();
+  },[opacity,index]);
+
+  return(
+    <Animated.View style={{opacity}}>
+      <GameCard game={game} />
+    </Animated.View>
+  )
+}
 
 const styles = StyleSheet.create({
   card: {
@@ -50,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GameCard;
+export { GameCard, AnimatedGameCard };

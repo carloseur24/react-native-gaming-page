@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { View, ActivityIndicator, FlatList } from "react-native";
+import { View, ActivityIndicator, FlatList, Animated } from 'react-native';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getLatestGames, GameType } from "../../lib/metacritic";
-import GameCard from "./GameCard";
-// import Logo from "./Logo";
+import {GameCard,AnimatedGameCard} from "./GameCard";
+import Logo from "../../assets/svg/Logo";
 
 export default function Main() {
   const [games, setGames] = useState<GameType[]>([]);
@@ -13,9 +13,9 @@ export default function Main() {
     getLatestGames().then((games: GameType[]) => setGames(games));
   }, []);
 
-  return (e
+  return (
     <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom, paddingHorizontal: 12 }}>
-      {/* <Logo /> */}
+      <Logo  width={200} height={80} />
       {games.length === 0 ? (
         <View style={{ display: "flex", width: "100%", height: "100%", justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator color="#fff" size="large" />
@@ -23,7 +23,7 @@ export default function Main() {
         ) : (
           <FlatList
             data={games}
-            renderItem={({ item }) => <GameCard game={item} />}
+            renderItem={({ item, index }) => <AnimatedGameCard game={item} index={index} />}
             keyExtractor={(item) => item.id.toString()}
           />
         )

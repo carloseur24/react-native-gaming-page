@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { View, ActivityIndicator, FlatList, Animated } from 'react-native';
+import { View, ActivityIndicator, FlatList} from 'react-native';
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getLatestGames, GameType } from "../../lib/metacritic";
-import {GameCard,AnimatedGameCard} from "./GameCard";
+import {AnimatedGameCard} from "./GameCard";
 import Logo from "../../assets/svg/Logo";
 
 export default function Main() {

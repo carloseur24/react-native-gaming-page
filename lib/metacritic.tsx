@@ -52,7 +52,7 @@ export async function getLatestGames() {
     const image =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTglt8efxtW_wHjgxJJEODKDJaMFzO9--fj5I7O8qCmI3EP2DFACkLnbty2wySZACxfUBsS';
 
-    console.log(item);
+    // console.log(item);
     const slug = name.replace(/\s/g, '-').toLowerCase();
 
     // const image = imageGetter(images.banner?.og);

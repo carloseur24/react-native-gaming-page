@@ -1,6 +1,6 @@
 import { GameType } from "@/lib/metacritic";
 import { useEffect, useRef } from "react";
-import { View, Text, Image, StyleSheet, Animated } from "react-native";
+import { View, Text, Image, Animated } from "react-native";
 import Score from "./Score";
 
 function GameCard({ game }: { game: GameType }) {
@@ -19,7 +19,7 @@ function GameCard({ game }: { game: GameType }) {
           <Text className="text-white text-xl font-bold">{game.name}</Text>
         </View>
 
-        <Text style={styles.description}>
+        <Text className="text-white/90 text-lg mb-4">
           {game.description.slice(0, 100)}...
         </Text>
       </View>
@@ -45,20 +45,5 @@ function AnimatedGameCard({ game, index }: { game: GameType; index: number }) {
     </Animated.View>
   );
 }
-
-const styles = StyleSheet.create({
-  card: {
-    alignItems: "baseline",
-    justifyContent: "center",
-    backgroundColor: "#000",
-    marginBottom: 20, // Add some spacing between cards
-  },
-  description: {
-    marginTop: 10,
-    fontWeight: "500",
-    color: "#eee",
-    fontSize: 18,
-  },
-});
 
 export { GameCard, AnimatedGameCard };

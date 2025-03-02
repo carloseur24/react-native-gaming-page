@@ -1,18 +1,13 @@
 import { Link } from "expo-router";
 import { Pressable, ScrollView, Text } from "react-native";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { ReturnIcon } from "@/components/Icons";
 
 export default function About() {
   return (
     <ScrollView className="ml-3 mt-10">
       <Link asChild href="/">
         <Pressable className="">
-          <Ionicons
-            name="return-down-back-sharp"
-            size={24}
-            color="white"
-            className="text-lg font-bold"
-          />
+          <ReturnIcon />
         </Pressable>
       </Link>
 

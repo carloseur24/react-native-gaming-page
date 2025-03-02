@@ -1,29 +1,36 @@
 import { GameType } from "@/lib/metacritic";
 import { useEffect, useRef } from "react";
-import { View, Text, Image, Animated } from "react-native";
+import { View, Text, Image, Animated, Pressable } from "react-native";
 import Score from "./Score";
+import { Link } from "expo-router";
 
 function GameCard({ game }: { game: GameType }) {
   return (
-    <View
-      className="rounded-lg bg-gray-500/10 mb-5 flex-row gap-4 box-border p-4"
-      key={game.id}
-    >
-      <Image
-        source={{ uri: game.image }}
-        className="w-36 h-48 rounded-lg bg-cover"
-      />
-      <View>
-        <View className="flex-row justify-start gap-2 items-center">
-          <Score score={Math.ceil(game.topCriticScore ?? 0)} maxScore={100} />
-          <Text className="text-white text-xl font-bold">{game.name}</Text>
-        </View>
+    <Link href={`/${game.name}`} asChild>
+      <Pressable className="active:opacity-50 active:scale-95 border border-transparent active:border-white/20 transition-all duration-300 rounded-lg bg-gray-500/10 mb-5 p-4">
+        <View className="flex-row gap-4 box-border" key={game.id}>
+          <Image
+            source={{ uri: game.image }}
+            className="w-36 h-48 rounded-lg bg-cover"
+          />
+          <View className="flex-shrink">
+            <View className="flex-row justify-start gap-2 items-center">
+              <Score
+                score={Math.ceil(game.topCriticScore ?? 0)}
+                maxScore={100}
+              />
+              <Text className="text-white text-xl font-bold flex-shrink">
+                {game.name}
+              </Text>
+            </View>
 
-        <Text className="text-white/90 text-lg mb-4">
-          {game.description.slice(0, 100)}...
-        </Text>
-      </View>
-    </View>
+            <Text className="text-white/90 text-lg mb-4">
+              {game.description.slice(0, 100)}...
+            </Text>
+          </View>
+        </View>
+      </Pressable>
+    </Link>
   );
 }
 

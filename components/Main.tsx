@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { View, ActivityIndicator, FlatList } from "react-native";
+import { View, ActivityIndicator, FlatList, Pressable } from "react-native";
 import { Link } from "expo-router";
 import {
   SafeAreaProvider,
@@ -8,7 +8,6 @@ import {
 import { getLatestGames, GameType } from "../lib/metacritic";
 import { AnimatedGameCard } from "./GameCard";
 import Logo from "../assets/svg/Logo";
-import { Text } from "react-native";
 import { AboutIcon } from "./Icons";
 
 export default function Main() {
@@ -31,7 +30,9 @@ export default function Main() {
         <Logo width={200} height={80} />
 
         <Link href="/about">
-          <AboutIcon />
+          <Pressable className="active:opacity-50 w-6">
+            <AboutIcon />
+          </Pressable>
         </Link>
 
         {games.length === 0 ? (

@@ -9,6 +9,7 @@ import { getLatestGames, GameType } from "../lib/metacritic";
 import { AnimatedGameCard } from "./GameCard";
 import Logo from "../assets/svg/Logo";
 import { Text } from "react-native";
+import { AboutIcon } from "./Icons";
 
 export default function Main() {
   const [games, setGames] = useState<GameType[]>([]);
@@ -30,7 +31,7 @@ export default function Main() {
         <Logo width={200} height={80} />
 
         <Link href="/about">
-          <Text className="text-slate-400 text-lg font-bold">Ir al About</Text>
+          <AboutIcon />
         </Link>
 
         {games.length === 0 ? (

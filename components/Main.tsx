@@ -27,13 +27,15 @@ export default function Main() {
           paddingHorizontal: 12,
         }}
       >
-        <Logo width={200} height={80} />
+        <View className="flex-row justify-between items-center">
+          <Logo width={200} height={80} />
 
-        <Link href="/about">
-          <Pressable className="active:opacity-50 w-6">
-            <AboutIcon />
-          </Pressable>
-        </Link>
+          <Link href="/about" asChild className="animate-pulse">
+            <Pressable className="active:opacity-50 w-6">
+              <AboutIcon />
+            </Pressable>
+          </Link>
+        </View>
 
         {games.length === 0 ? (
           <View className="flex w-full h-full items-center justify-center">

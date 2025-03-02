@@ -6,7 +6,7 @@ export default function About() {
   return (
     <ScrollView className="ml-3 mt-10">
       <Link asChild href="/">
-        <Pressable className="">
+        <Pressable className="active:opacity-50 w-10">
           <ReturnIcon />
         </Pressable>
       </Link>

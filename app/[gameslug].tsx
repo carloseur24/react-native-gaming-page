@@ -1,15 +1,17 @@
 import { Screen } from "@/components/Screen";
 import { Stack, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
-import { Image, Text, View,ActivityIndicator } from "react-native";
-import { getLatestGames, GameType } from "../lib/metacritic";
+import { Image, Text, View, ActivityIndicator } from "react-native";
+import { getLatestGames } from "../lib/metacritic";
 
 export default function Detail() {
   const { gameslug } = useLocalSearchParams();
   const [gameInfo, setGameInfo] = useState(null);
   useEffect(() => {
-    if (gameslug){
-      getLatestGames(gameslug).then(setGameInfo);
+    if (gameslug) {
+      getLatestGames().then((gameInfo) => {
+        setGameInfo(gameInfo);
+      });
     }
   }, [gameslug]);
   return (
@@ -31,16 +33,21 @@ export default function Detail() {
       <View className="flex-col justify-between items-center gap-5">
         {gameInfo === null ? (
           <View className="flex w-full h-full items-center justify-center">
-          <ActivityIndicator color="#fff" size="large" />
-        </View>
+            <ActivityIndicator color="#fff" size="large" />
+          </View>
         ) : (
-          <Text className="text-white text-2xl font-bold px-8 text-center">
+          <>
             <Image
-              source={{ uri: gameInfo.image }}
+              source={{ uri: gameInfo[0].image }}
               className="w-36 h-48 rounded-lg bg-cover"
             />
-            {gameslug}
-          </Text>
+            <Text className="text-white text-2xl font-bold px-8 text-center">
+              {gameslug}
+            </Text>
+            <Text className="text-slate-300 text-xl px-4 flex-shrink text-left">
+              {gameInfo[0].description}
+            </Text>
+          </>
         )}
       </View>
     </Screen>

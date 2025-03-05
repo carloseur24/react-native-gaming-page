@@ -1,22 +1,48 @@
-import { ReturnIcon } from "@/components/Icons";
-import { Link, useLocalSearchParams } from "expo-router";
-import { Pressable, Text, View } from "react-native";
+import { Screen } from "@/components/Screen";
+import { Stack, useLocalSearchParams } from "expo-router";
+import { useEffect, useState } from "react";
+import { Image, Text, View,ActivityIndicator } from "react-native";
+import { getLatestGames, GameType } from "../lib/metacritic";
 
 export default function Detail() {
   const { gameslug } = useLocalSearchParams();
+  const [gameInfo, setGameInfo] = useState(null);
+  useEffect(() => {
+    if (gameslug){
+      getLatestGames(gameslug).then(setGameInfo);
+    }
+  }, [gameslug]);
   return (
-    <View>
+    <Screen>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: "black" },
+          headerTintColor: "white",
+          headerTitle: "",
+          headerLeft: () => {},
+          headerRight: () => (
+            <Text className="text-white text-xl font-bold text-center">
+              {gameslug}
+            </Text>
+          ),
+        }}
+      />
+
       <View className="flex-col justify-between items-center gap-5">
-        <Text className="text-white text-2xl font-bold px-8 text-center">
-          Detalles de {gameslug}
-        </Text>
-        <Link href="/" asChild>
-          <Pressable className="active:opacity-50 flex-row items-center gap-2 justify-center">
-            <ReturnIcon />
-            <Text className="text-white/90 text-lg mb-4">Volver</Text>
-          </Pressable>
-        </Link>
+        {gameInfo === null ? (
+          <View className="flex w-full h-full items-center justify-center">
+          <ActivityIndicator color="#fff" size="large" />
+        </View>
+        ) : (
+          <Text className="text-white text-2xl font-bold px-8 text-center">
+            <Image
+              source={{ uri: gameInfo.image }}
+              className="w-36 h-48 rounded-lg bg-cover"
+            />
+            {gameslug}
+          </Text>
+        )}
       </View>
-    </View>
+    </Screen>
   );
 }

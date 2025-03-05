@@ -13,11 +13,6 @@ export const ReturnIcon = (props: any) => {
 
 export const AboutIcon = (props: any) => {
   return (
-    <Ionicons
-      name="information-circle-outline"
-      size={24}
-      color="white"
-      {...props}
-    />
+    <Ionicons name="information-circle-outline" color="white" {...props} />
   );
 };

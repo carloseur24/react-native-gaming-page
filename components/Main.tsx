@@ -9,6 +9,7 @@ import { getLatestGames, GameType } from "../lib/metacritic";
 import { AnimatedGameCard } from "./GameCard";
 import Logo from "../assets/svg/Logo";
 import { AboutIcon } from "./Icons";
+import { Screen } from "./Screen";
 
 export default function Main() {
   const [games, setGames] = useState<GameType[]>([]);
@@ -19,38 +20,27 @@ export default function Main() {
   }, []);
 
   return (
-    <SafeAreaProvider>
-      <View
-        style={{
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
-          paddingHorizontal: 12,
-        }}
-      >
-        <View className="flex-row justify-between items-center">
-          <Logo width={200} height={80} />
-
-          <Link href="/about" asChild className="animate-pulse">
-            <Pressable className="active:opacity-50 w-6">
-              <AboutIcon />
-            </Pressable>
-          </Link>
+    <Screen
+      className="bg-black"
+      style={{
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+        paddingHorizontal: 12,
+      }}
+    >
+      {games.length === 0 ? (
+        <View className="flex w-full h-full items-center justify-center">
+          <ActivityIndicator color="#fff" size="large" />
         </View>
-
-        {games.length === 0 ? (
-          <View className="flex w-full h-full items-center justify-center">
-            <ActivityIndicator color="#fff" size="large" />
-          </View>
-        ) : (
-          <FlatList
-            data={games}
-            renderItem={({ item, index }) => (
-              <AnimatedGameCard game={item} index={index} />
-            )}
-            keyExtractor={(item) => item.id.toString()}
-          />
-        )}
-      </View>
-    </SafeAreaProvider>
+      ) : (
+        <FlatList
+          data={games}
+          renderItem={({ item, index }) => (
+            <AnimatedGameCard game={item} index={index} />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
+      )}
+    </Screen>
   );
 }

@@ -1,14 +1,8 @@
 import { useEffect, useState } from "react";
-import { View, ActivityIndicator, FlatList, Pressable } from "react-native";
-import { Link } from "expo-router";
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
+import { View, ActivityIndicator, FlatList } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { getLatestGames, GameType } from "../lib/metacritic";
 import { AnimatedGameCard } from "./GameCard";
-import Logo from "../assets/svg/Logo";
-import { AboutIcon } from "./Icons";
 import { Screen } from "./Screen";
 
 export default function Main() {
